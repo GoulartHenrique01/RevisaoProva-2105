@@ -52,14 +52,6 @@ public class TarefaService {
         throw new RuntimeException("Tarefa não encontrada");
     }
 
-    public Tarefas listarPorId(Long id){
-        Optional<Tarefas> retorno = tarefasRepositorio.findById(id);
-        if(retorno.isPresent()){
-            return retorno.get();
-        }
-        throw new RuntimeException("Tarefa não encontrada");
-    }
-
     private Tarefas tarefaRequestDtoParaTarefas(TarefasRequestDto entrada){
         Tarefas saida = new Tarefas();
         saida.setNome(entrada.getNome());
