@@ -24,7 +24,7 @@ public class TarefaService {
             return tarefasRepositorio.findByNomeContaining(filtro.getNome());
         }
         if(filtro.getDataInicio() != null){
-            return tarefasRepositorio.findBydataInicioGreaterThan(filtro.getDataInicio());
+            return tarefasRepositorio.findByDataInicioGreaterThan(filtro.getDataInicio());
         }
         return tarefasRepositorio.findAll();
     }

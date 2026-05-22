@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface TarefasRepositorio extends JpaRepository<Tarefas, Long> {
     List<Tarefas> findByNomeContaining(String nome);
-    List<Tarefas> findBydataInicioGreaterThan(LocalDate dataInicio);
+    List<Tarefas> findByDataInicioGreaterThan(LocalDate dataInicio);
 }
